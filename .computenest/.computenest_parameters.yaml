@@ -1,0 +1,1 @@
+{"ServiceType":"private","AllowedRegions":["cn-hangzhou","cn-shanghai","cn-beijing"],"ArtifactSourceType":"DockerCompose","RepoName":"JJGGu/hyperswitch","Arch":"EcsSingle","DockerComposeEnvPath":".env","RegionId":"cn-hangzhou","CustomParameters":"","DockerComposeYamlPath":"docker-compose.yml"}

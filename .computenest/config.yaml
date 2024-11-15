@@ -1,0 +1,277 @@
+Service:
+  RegionId: cn-hangzhou
+  DeployType: ros
+  OperationMetadata:
+    StatusOperationConfigs:
+      - TemplateName: '单机版'
+        SupportOperations:
+          - Start
+          - Stop
+          - Restart
+    SupportBackup: true
+  DeployMetadata:
+    SupplierDeployMetadata:
+      FileArtifactRelation:
+        '{{ computenest::file::JJGGu_hyperswitch-docker-compose }}':
+          ArtifactId: ${Artifact.Artifact_1.ArtifactId}
+          ArtifactVersion: ${Artifact.Artifact_1.ArtifactVersion}
+    TemplateConfigs:
+      - Name: 单机版
+        Url: 'ros_templates/template.yaml'
+        AllowedRegions:
+          - cn-hangzhou
+          - cn-shanghai
+          - cn-beijing
+  ServiceType: private
+  ServiceInfo:
+    Locale: zh-CN
+    ShortDescription: docker compose deploy
+    Image: 'resources/icons/service_logo.png'
+Artifact:
+  Artifact_1:
+    ArtifactType: File
+    ArtifactName: JJGGu_hyperswitch-docker-compose
+    ArtifactProperty:
+      RegionId: cn-hangzhou
+      Url: 'resources/artifact_resources/docker_compose.tar'
+  Artifact_2:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-postgres
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_1.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_1.Tag}
+      RepoType: Public
+  Artifact_3:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-redis
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_2.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_2.Tag}
+      RepoType: Public
+  Artifact_4:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-rust
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_3.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_3.Tag}
+      RepoType: Public
+  Artifact_5:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-juspaydotin-hyperswitch-router
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_4.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_4.Tag}
+      RepoType: Public
+  Artifact_6:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-juspaydotin-hyperswitch-producer
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_5.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_5.Tag}
+      RepoType: Public
+  Artifact_7:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-juspaydotin-hyperswitch-consumer
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_6.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_6.Tag}
+      RepoType: Public
+  Artifact_8:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-juspaydotin-hyperswitch-drainer
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_7.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_7.Tag}
+      RepoType: Public
+  Artifact_9:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-juspaydotin-hyperswitch-control-center
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_8.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_8.Tag}
+      RepoType: Public
+  Artifact_10:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-grafana-grafana
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_9.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_9.Tag}
+      RepoType: Public
+  Artifact_11:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-grafana-loki
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_10.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_10.Tag}
+      RepoType: Public
+  Artifact_12:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-otel-opentelemetry-collector-contrib
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_11.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_11.Tag}
+      RepoType: Public
+  Artifact_13:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-prom-prometheus
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_12.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_12.Tag}
+      RepoType: Public
+  Artifact_14:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-grafana-tempo
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_13.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_13.Tag}
+      RepoType: Public
+  Artifact_15:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-redislabs-redisinsight
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_14.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_14.Tag}
+      RepoType: Public
+  Artifact_16:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-confluentinc-cp-kafka
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_15.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_15.Tag}
+      RepoType: Public
+  Artifact_17:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-provectuslabs-kafka-ui
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_16.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_16.Tag}
+      RepoType: Public
+  Artifact_18:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-clickhouse-clickhouse-server
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_17.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_17.Tag}
+      RepoType: Public
+  Artifact_19:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-opensearchproject-opensearch
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_18.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_18.Tag}
+      RepoType: Public
+  Artifact_20:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-opensearchproject-opensearch-dashboards
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_19.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_19.Tag}
+      RepoType: Public
+  Artifact_21:
+    ArtifactType: AcrImage
+    ArtifactName: AcrImage-timberio-vector
+    ArtifactProperty:
+      RepoName: ${AcrImageBuilder.AcrImage_20.RepoName}
+      Tag: ${AcrImageBuilder.AcrImage_20.Tag}
+      RepoType: Public
+AcrImageBuilder:
+  AcrImage_1:
+    BuildType: DockerRepo
+    DockerRepoUrl: postgres:latest
+    RepoName: postgres
+    Tag: latest
+  AcrImage_2:
+    BuildType: DockerRepo
+    DockerRepoUrl: redis:7
+    RepoName: redis
+    Tag: 7
+  AcrImage_3:
+    BuildType: DockerRepo
+    DockerRepoUrl: rust:latest
+    RepoName: rust
+    Tag: latest
+  AcrImage_4:
+    BuildType: DockerRepo
+    DockerRepoUrl: juspaydotin/hyperswitch-router:standalone
+    RepoName: juspaydotin/hyperswitch-router
+    Tag: standalone
+  AcrImage_5:
+    BuildType: DockerRepo
+    DockerRepoUrl: juspaydotin/hyperswitch-producer:standalone
+    RepoName: juspaydotin/hyperswitch-producer
+    Tag: standalone
+  AcrImage_6:
+    BuildType: DockerRepo
+    DockerRepoUrl: juspaydotin/hyperswitch-consumer:standalone
+    RepoName: juspaydotin/hyperswitch-consumer
+    Tag: standalone
+  AcrImage_7:
+    BuildType: DockerRepo
+    DockerRepoUrl: juspaydotin/hyperswitch-drainer:standalone
+    RepoName: juspaydotin/hyperswitch-drainer
+    Tag: standalone
+  AcrImage_8:
+    BuildType: DockerRepo
+    DockerRepoUrl: juspaydotin/hyperswitch-control-center:latest
+    RepoName: juspaydotin/hyperswitch-control-center
+    Tag: latest
+  AcrImage_9:
+    BuildType: DockerRepo
+    DockerRepoUrl: grafana/grafana:latest
+    RepoName: grafana/grafana
+    Tag: latest
+  AcrImage_10:
+    BuildType: DockerRepo
+    DockerRepoUrl: grafana/loki:latest
+    RepoName: grafana/loki
+    Tag: latest
+  AcrImage_11:
+    BuildType: DockerRepo
+    DockerRepoUrl: otel/opentelemetry-collector-contrib:latest
+    RepoName: otel/opentelemetry-collector-contrib
+    Tag: latest
+  AcrImage_12:
+    BuildType: DockerRepo
+    DockerRepoUrl: prom/prometheus:latest
+    RepoName: prom/prometheus
+    Tag: latest
+  AcrImage_13:
+    BuildType: DockerRepo
+    DockerRepoUrl: grafana/tempo:latest
+    RepoName: grafana/tempo
+    Tag: latest
+  AcrImage_14:
+    BuildType: DockerRepo
+    DockerRepoUrl: redislabs/redisinsight:latest
+    RepoName: redislabs/redisinsight
+    Tag: latest
+  AcrImage_15:
+    BuildType: DockerRepo
+    DockerRepoUrl: confluentinc/cp-kafka:7.0.5
+    RepoName: confluentinc/cp-kafka
+    Tag: 7.0.5
+  AcrImage_16:
+    BuildType: DockerRepo
+    DockerRepoUrl: provectuslabs/kafka-ui:latest
+    RepoName: provectuslabs/kafka-ui
+    Tag: latest
+  AcrImage_17:
+    BuildType: DockerRepo
+    DockerRepoUrl: clickhouse/clickhouse-server:24.3
+    RepoName: clickhouse/clickhouse-server
+    Tag: 24.3
+  AcrImage_18:
+    BuildType: DockerRepo
+    DockerRepoUrl: opensearchproject/opensearch:2
+    RepoName: opensearchproject/opensearch
+    Tag: 2
+  AcrImage_19:
+    BuildType: DockerRepo
+    DockerRepoUrl: opensearchproject/opensearch-dashboards:2
+    RepoName: opensearchproject/opensearch-dashboards
+    Tag: 2
+  AcrImage_20:
+    BuildType: DockerRepo
+    DockerRepoUrl: timberio/vector:latest-debian
+    RepoName: timberio/vector
+    Tag: latest-debian
