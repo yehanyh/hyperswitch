@@ -221,52 +221,7 @@ Resources:
           - Ref: EcsVpc
           - Ref: VpcId
       SecurityGroupIngress:
-        - PortRange: 3000/3000
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9200/9200
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
         - PortRange: 3100/3100
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 16379/16379
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8090/8090
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 5601/5601
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 4317/4317
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8686/8686
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9000/9000
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 3103/3103
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -276,17 +231,27 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
+        - PortRange: 9200/9200
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9060/9060
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9093/9093
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
         - PortRange: 8001/8001
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9050/9050
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9598/9598
+        - PortRange: 8123/8123
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -296,7 +261,32 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
+        - PortRange: 4317/4317
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
         - PortRange: 29092/29092
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9050/9050
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 5601/5601
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 3103/3103
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9598/9598
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -311,27 +301,12 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9093/9093
+        - PortRange: 9090/9090
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9060/9060
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 5252/5252
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8888/8888
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8123/8123
+        - PortRange: 8686/8686
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -341,17 +316,42 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9090/9090
+        - PortRange: 5252/5252
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 6379/6379
+        - PortRange: 9000/9000
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 8090/8090
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 16379/16379
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
         - PortRange: 8889/8889
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 8888/8888
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 3000/3000
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 6379/6379
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -428,20 +428,241 @@ Resources:
             systemctl start docker-compose-app
           - RegionId:
               Ref: ALIYUN::Region
-Outputs:
-  ServerAddress:
+Outputs: 
+  pg_address:
     Description:
-      en: ServerAddress.
-      zh-cn: 访问页面。
+      en: pg address.
+      zh-cn: pg 访问页面。
     Value:
       Fn::Sub:
-        - http://${ServerAddress}:8080, http://${ServerAddress}:9997, http://${ServerAddress}:5601, http://${ServerAddress}:6379, http://${ServerAddress}:9060, http://${ServerAddress}:3103, http://${ServerAddress}:3000, http://${ServerAddress}:9093, http://${ServerAddress}:16379, http://${ServerAddress}:9598, http://${ServerAddress}:9050, http://${ServerAddress}:8123, http://${ServerAddress}:3200, http://${ServerAddress}:8090, http://${ServerAddress}:8889, http://${ServerAddress}:8686, http://${ServerAddress}:5252, http://${ServerAddress}:9092, http://${ServerAddress}:5432, http://${ServerAddress}:29092, http://${ServerAddress}:9200, http://${ServerAddress}:9000, http://${ServerAddress}:4317, http://${ServerAddress}:8001, http://${ServerAddress}:9090, http://${ServerAddress}:3100, http://${ServerAddress}:8888
+        - http://${ServerAddress}:5432
         - ServerAddress:
             Fn::Select:
-            - 0
-            - Fn::GetAtt:
-              - InstanceGroup
-              - PublicIps
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  redis-standalone_address:
+    Description:
+      en: redis-standalone address.
+      zh-cn: redis-standalone 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:6379
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  hyperswitch-server_address:
+    Description:
+      en: hyperswitch-server address.
+      zh-cn: hyperswitch-server 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:8080
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  hyperswitch-web_address:
+    Description:
+      en: hyperswitch-web address.
+      zh-cn: hyperswitch-web 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9050, http://${ServerAddress}:5252, http://${ServerAddress}:9060
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  hyperswitch-control-center_address:
+    Description:
+      en: hyperswitch-control-center address.
+      zh-cn: hyperswitch-control-center 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9000
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  redis-cluster_address:
+    Description:
+      en: redis-cluster address.
+      zh-cn: redis-cluster 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:16379, http://${ServerAddress}:6379
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  grafana_address:
+    Description:
+      en: grafana address.
+      zh-cn: grafana 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:3000
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  loki_address:
+    Description:
+      en: loki address.
+      zh-cn: loki 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:3100
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  otel-collector_address:
+    Description:
+      en: otel-collector address.
+      zh-cn: otel-collector 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:8889, http://${ServerAddress}:4317, http://${ServerAddress}:8888
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  prometheus_address:
+    Description:
+      en: prometheus address.
+      zh-cn: prometheus 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9090
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  tempo_address:
+    Description:
+      en: tempo address.
+      zh-cn: tempo 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:3200, http://${ServerAddress}:4317
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  redis-insight_address:
+    Description:
+      en: redis-insight address.
+      zh-cn: redis-insight 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:8001
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  kafka0_address:
+    Description:
+      en: kafka0 address.
+      zh-cn: kafka0 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:29092, http://${ServerAddress}:9093, http://${ServerAddress}:9997, http://${ServerAddress}:9092
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  kafka-ui_address:
+    Description:
+      en: kafka-ui address.
+      zh-cn: kafka-ui 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:8090
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  clickhouse-server_address:
+    Description:
+      en: clickhouse-server address.
+      zh-cn: clickhouse-server 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9000, http://${ServerAddress}:8123
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  opensearch_address:
+    Description:
+      en: opensearch address.
+      zh-cn: opensearch 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9200
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  opensearch-dashboards_address:
+    Description:
+      en: opensearch-dashboards address.
+      zh-cn: opensearch-dashboards 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:5601
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
+  vector_address:
+    Description:
+      en: vector address.
+      zh-cn: vector 访问页面。
+    Value:
+      Fn::Sub:
+        - http://${ServerAddress}:9598, http://${ServerAddress}:3103, http://${ServerAddress}:8686
+        - ServerAddress:
+            Fn::Select:
+              - 0
+              - Fn::GetAtt:
+                  - InstanceGroup
+                  - PublicIps
 Metadata:
   ALIYUN::ROS::Interface:
     ParameterGroups:
