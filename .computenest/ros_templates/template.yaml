@@ -221,32 +221,7 @@ Resources:
           - Ref: EcsVpc
           - Ref: VpcId
       SecurityGroupIngress:
-        - PortRange: 3100/3100
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
         - PortRange: 9092/9092
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9200/9200
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9060/9060
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9093/9093
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8001/8001
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -256,17 +231,12 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9997/9997
+        - PortRange: 8889/8889
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 4317/4317
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 29092/29092
+        - PortRange: 8001/8001
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -276,52 +246,12 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 5601/5601
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 3103/3103
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9598/9598
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8080/8080
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
         - PortRange: 3200/3200
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 9090/9090
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 8686/8686
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 5432/5432
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 5252/5252
-          Priority: 1
-          SourceCidrIp: 0.0.0.0/0
-          IpProtocol: tcp
-          NicType: internet
-        - PortRange: 9000/9000
+        - PortRange: 9200/9200
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -331,12 +261,57 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
+        - PortRange: 8686/8686
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 5252/5252
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 4317/4317
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
         - PortRange: 16379/16379
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 8889/8889
+        - PortRange: 5432/5432
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9598/9598
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9060/9060
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 3103/3103
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9000/9000
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9090/9090
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 8080/8080
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -346,12 +321,37 @@ Resources:
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
-        - PortRange: 3000/3000
+        - PortRange: 29092/29092
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9093/9093
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
           NicType: internet
         - PortRange: 6379/6379
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 3100/3100
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 5601/5601
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 9997/9997
+          Priority: 1
+          SourceCidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          NicType: internet
+        - PortRange: 3000/3000
           Priority: 1
           SourceCidrIp: 0.0.0.0/0
           IpProtocol: tcp
@@ -406,7 +406,7 @@ Resources:
             wget '{{ computenest::file::JJGGu_hyperswitch-docker-compose }}' -O /root/application/docker_compose.tar
             tar -xvf /root/application/docker_compose.tar -C /root/application
 
-            cat > /etc/systemd/system/docker-compose-app.service <<EOF
+            cat > /etc/systemd/system/JJGGu_hyperswitch.service <<EOF
             [Unit]
             Description=Docker Compose Application Service
             Requires=docker.service
@@ -424,8 +424,10 @@ Resources:
             WantedBy=multi-user.target
             EOF
 
+            systemctl enable JJGGu_hyperswitch
+
             
-            systemctl start docker-compose-app
+            systemctl start JJGGu_hyperswitch
           - RegionId:
               Ref: ALIYUN::Region
 Outputs: 
@@ -539,7 +541,7 @@ Outputs:
       zh-cn: otel-collector 访问页面。
     Value:
       Fn::Sub:
-        - http://${ServerAddress}:8889, http://${ServerAddress}:4317, http://${ServerAddress}:8888
+        - http://${ServerAddress}:8888, http://${ServerAddress}:8889, http://${ServerAddress}:4317
         - ServerAddress:
             Fn::Select:
               - 0
@@ -591,7 +593,7 @@ Outputs:
       zh-cn: kafka0 访问页面。
     Value:
       Fn::Sub:
-        - http://${ServerAddress}:29092, http://${ServerAddress}:9093, http://${ServerAddress}:9997, http://${ServerAddress}:9092
+        - http://${ServerAddress}:9092, http://${ServerAddress}:9093, http://${ServerAddress}:9997, http://${ServerAddress}:29092
         - ServerAddress:
             Fn::Select:
               - 0
@@ -656,7 +658,7 @@ Outputs:
       zh-cn: vector 访问页面。
     Value:
       Fn::Sub:
-        - http://${ServerAddress}:9598, http://${ServerAddress}:3103, http://${ServerAddress}:8686
+        - http://${ServerAddress}:8686, http://${ServerAddress}:3103, http://${ServerAddress}:9598
         - ServerAddress:
             Fn::Select:
               - 0
